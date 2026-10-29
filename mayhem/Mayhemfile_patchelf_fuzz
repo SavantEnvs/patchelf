@@ -1,0 +1,9 @@
+project: savantenvs/patchelf
+target: patchelf_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/patchelf_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/patchelf_fuzz
+    libfuzzer: true
+    timeout: 5
